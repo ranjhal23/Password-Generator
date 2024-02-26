@@ -13,51 +13,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="wrapper">
     <div class="container">
-        <h1>Password Generator</h1>
-        <div class="display-container">
-            <input readonly placeholder="Password" class="display" data-passwordDisplay>
-            <button data-copy>
-                <span data-copyMsg></span>
-                <img src="images/copy.svg" alt="copy" width="23" height="23" >
-            </button>
+      <h1 class="heading">Password Generator</h1>
+      <div class="display-container">
+          <input readonly placeholder="Password" class="display" data-passwordDisplay>
+          <button class="copy-Btn" data-copy>
+              <span data-copyMsg></span>
+              <img src="images/copy.svg" alt="copy" width="23" height="23" >
+          </button>
+      </div>
+      <!-- Input Container  -->
+      <div class="inputContainer">
+      <div class="lengthContainer">
+      <p>Password Length</p>
+      <p length-Display>0</p>
+      </div> 
+      <!--slider-->
+      <input type="range" min="1" max="20" step="1" class="slider" data-lengthSlider>
+       <!-- Checkboxes  -->
+       <div>
+          <div class="check">
+            <input type="checkbox" name="" id="uppercase" />
+            <label for="uppercase">include uppercase letters</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" name="" id="lowercase" />
+            <label for="lowercase">include lowercase letters</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" name="" id="numbers" />
+            <label for="numbers">include numbers</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" name="" id="symbols" />
+            <label for="symbols">include symbols</label>
+          </div>
         </div>
-        <!-- Input Container  -->
-        <div class="inputContainer">
-        <div class="lengthContainer">
-        <p>Password Length</p>
-        <p length-Display>0</p>
-        </div> 
-        <!--slider-->
-        <input type="range" min="1" max="20" step="1" class="slider" data-lengthSlider>
-         <!-- Checkboxes  -->
-         <div>
-            <div class="check">
-              <input type="checkbox" name="" id="uppercase" />
-              <label for="uppercase">include uppercase letters</label>
-            </div>
-            <div class="check">
-              <input type="checkbox" name="" id="lowercase" />
-              <label for="lowercase">include lowercase letters</label>
-            </div>
-            <div class="check">
-              <input type="checkbox" name="" id="numbers" />
-              <label for="numbers">include numbers</label>
-            </div>
-            <div class="check">
-              <input type="checkbox" name="" id="symbols" />
-              <label for="symbols">include symbols</label>
-            </div>
-          </div>
-           <!-- Strength Container -->
-           <div class="strengthContainer">
-            <p>Strength</p>
-            <div class="indicator"></div>
-          </div>
-            <!-- Button  -->
-            <button id="generateBtn">Generate password</button>
-         </div> 
-    </div>
+         <!-- Strength Container -->
+         <div class="strengthContainer">
+          <p>Strength</p>
+          <div class="indicator"></div>
+        </div>
+          <!-- Button  -->
+          <button id="generateBtn">Generate password</button>
+       </div> 
+  </div>
+  </div> 
     <script src="script.js"></script>
 </body>
 </html>
